@@ -53,7 +53,7 @@ export const packageJson = `
     "test": "echo 'No tests yet...'"
   },
   "dependencies": {
-    "@bluvenit/astro-adapter-azure": "^1.0.0",
+    "@bluvenit/astro-adapter-azure": "github:plain-insure/astro-adapter-azure",
     "@azure/functions": "^4.0.0"
   },
   "devDependencies": {},
