@@ -1,7 +1,7 @@
 {
   "name": "@bluvenit/astro-adapter-azure",
   "description": "Deploy your site to Azure using SWA",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -37,13 +37,13 @@
     "node": ">=18.0.0"
   },
   "peerDependencies": {
-    "astro": "^4.2.0",
-    "@azure/functions": "^4.0.0"
+    "@azure/functions": "^4.0.0",
+    "astro": "^5.0.0"
   },
   "devDependencies": {
     "@azure/functions": "^4.0.0",
     "@types/node": "^18.17.8",
-    "astro": "^4.3.5",
+    "astro": "^5.14.8",
     "typescript": "^5.2.2",
     "vitest": "^1.3.1"
   },

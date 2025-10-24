@@ -82,7 +82,6 @@ app.http("astroSSR", {
           serverEntrypoint: "@bluvenit/astro-adapter-azure/ssr-function.js",
           exports: ["default"],
           adapterFeatures: {
-            functionPerRoute: false,
             edgeMiddleware: false,
           },
           supportedAstroFeatures: {

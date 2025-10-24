@@ -7,6 +7,7 @@ This adapter uses Azure Functions v4 programming model and requires Node.js 18+ 
 ## Requirements
 
 - Node.js 18.0.0 or higher
+- Astro 5.0.0 or higher (supports up to 5.14.8)
 - Azure Functions Runtime v4.25+ (for deployment)
 
 ## Setup

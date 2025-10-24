@@ -1,5 +1,20 @@
 # @bluvenit/astro-adapter-azure
 
+## 2.0.0
+
+### Major Changes
+
+- **BREAKING**: Added support for Astro 5.0+ (supports up to 5.14.8)
+- **BREAKING**: Removed deprecated `functionPerRoute` adapter feature as per Astro 5 requirements
+- Updated peer dependency to require `astro: ^5.0.0`
+- Maintains compatibility with Azure Functions v4 programming model
+
+### Migration Notes
+
+If upgrading from v1.x.x:
+1. Ensure your project uses Astro 5.0.0 or higher
+2. No other changes required - Azure Functions v4 compatibility remains unchanged
+
 ## 1.0.0
 
 ### Major Changes
