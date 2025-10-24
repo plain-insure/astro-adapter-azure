@@ -45,12 +45,15 @@ export const packageJson = `
   "name": "api",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "start": "func start",
     "test": "echo 'No tests yet...'"
   },
   "dependencies": {
-    "@bluvenit/astro-adapter-azure": "^0.0.5",
+    "@bluvenit/astro-adapter-azure": "^1.0.0",
     "@azure/functions": "^4.0.0"
   },
   "devDependencies": {},

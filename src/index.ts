@@ -35,13 +35,23 @@ export default function azureIntegration(): AstroIntegration {
       new URL("./index.mjs", ssrOutputDir()),
       `
 import { app } from "@azure/functions";
-import createSSRHandler from "./entry.mjs";
+import { createExports } from "./entry.mjs";
 
-app.http("handler", {
-  methods: ["GET", "POST"],
+// Get the SSR handler from the Astro adapter
+const { default: createHandler } = createExports(
+  // This will be replaced by Astro's build process with the actual manifest
+  globalThis.__astro_manifest__
+);
+
+// Create the handler with configuration
+const handler = createHandler({ notFoundContent: ${escapedContent} });
+
+// Register the HTTP trigger with Azure Functions v4 programming model
+app.http("astroSSR", {
+  methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "HEAD", "OPTIONS"],
   authLevel: "anonymous",
   route: "{*segments}",
-  handler: createSSRHandler({ notFoundContent: ${escapedContent} }),
+  handler: handler,
 });
 `
     );
